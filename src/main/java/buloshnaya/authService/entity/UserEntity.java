@@ -2,9 +2,7 @@ package buloshnaya.authService.entity;
 
 import buloshnaya.authService.model.Role;
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -13,9 +11,11 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "users")
+@Builder
 @Getter
 @Setter
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -37,11 +37,12 @@ public class UserEntity {
     @Column(name = "role", nullable = false)
     private Role role;
 
+    @Builder.Default
     @CreationTimestamp
     @Column(name = "created_at")
     private OffsetDateTime createdAt = OffsetDateTime.now();
 
     @UpdateTimestamp
     @Column(name = "updated_at")
-    private String updatedAt;
+    private OffsetDateTime updatedAt;
 }

@@ -14,10 +14,10 @@ spring:
     hibernate:
       ddl-auto: validate
     show-sql: true
-  jwt:
-    secret: my-super-secret-key-for-jwt-minimum-32-chars
-    expiration: 3600000
-    refresh-expiration: 86400000
+jwt:
+  secret: a-string-secret-at-least-256-bits-longasflkasdl;fasdklfasdflsdkflasdflk;asdlfasdklfasdklfaskldfklas;dflkasdflkasdflkasdflkasdflasdlfasdklfasklfasldfaskldfaslfaksdlfaklsdflkasdfklsd
+  expiration: 3600000
+  refresh-expiration: 86400000
 
 server:
   port: 8082

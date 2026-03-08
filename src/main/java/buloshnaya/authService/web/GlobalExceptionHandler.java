@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
         logger.error("An unexpected error occurred", e);
 
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(
-                e.getMessage(),
+               null,
                 "INTERNAL_SERVER_ERROR"
         );
 

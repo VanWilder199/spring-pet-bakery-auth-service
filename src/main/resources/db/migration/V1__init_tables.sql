@@ -7,7 +7,7 @@ CREATE TABLE users (
     role VARCHAR(50) NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
+) ;
 
 CREATE TABLE refresh_tokens (
     id BIGSERIAL PRIMARY KEY,

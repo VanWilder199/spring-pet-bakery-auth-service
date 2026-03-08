@@ -53,6 +53,7 @@ public class AuthService {
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .name(request.getName())
+                .surname(request.getSurname())
                 .role(Role.CLIENT)
                 .build();
 
